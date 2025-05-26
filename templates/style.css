@@ -1,0 +1,15 @@
+/* style.css */
+
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* You can add any additional custom CSS here that isn't handled by Tailwind */
+/* For example: */
+/*
+.custom-class {
+    border: 2px solid #f0f0f0;
+    padding: 1rem;
+}
+*/
