@@ -1,0 +1,201 @@
+/* style.css */
+
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for the body */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Default bright background */
+    background: linear-gradient(to right, var(--scroll-gradient-start1), var(--scroll-gradient-start2));
+    color: var(--text-primary); /* Dark blue-gray text */
+    transition: background 0.5s ease-out, color 0.5s ease-out; /* Smooth transitions */
+}
+
+/* Define CSS variables for Bright Theme (Blue & White) */
+/* These are now the only active variables */
+:root { /* Using :root to define global variables */
+    /* General colors */
+    --bg-primary: #fcfcfc; /* Slightly brighter white background */
+    --text-primary: #2c3e50; /* Dark blue-gray text */
+    --text-secondary: #5a6a7c; /* Slightly lighter dark text for paragraphs */
+    --text-heading: #1a202c; /* Very dark for headings */
+
+    /* Header */
+    --header-bg-start: #3498db; /* Bright blue */
+    --header-bg-end: #2980b9; /* Slightly darker blue */
+    --header-link-hover: #e0e0e0; /* Light gray for hover */
+
+    /* Section backgrounds */
+    --section-bg: #ffffff; /* Pure white for sections, stands out from body bg */
+
+    /* Project card backgrounds */
+    --card-bg: #f8faff; /* Very light blue-white for cards */
+
+    /* Photo border */
+    --photo-border: #3498db; /* Bright blue border */
+
+    /* Link colors */
+    --link-main: #3498db; /* Bright blue for general links */
+    --link-main-hover: #2980b9; /* Darker blue on hover */
+    --link-linkedin: #0077B5; /* Standard LinkedIn blue */
+    --link-whatsapp: #25D366; /* Standard WhatsApp green */
+    --link-personal-email: #D44638; /* Standard Google red */
+    --link-student-email: #8e44ad; /* Standard purple */
+    --link-codeforces: #FF8C00; /* Standard Codeforces orange */
+    --link-github: #333333; /* Standard dark gray */
+
+    /* Footer */
+    --footer-bg: #2c3e50; /* Dark blue-gray footer */
+    --footer-text: #ecf0f1; /* Light gray text */
+    --footer-link-hover: #ffffff; /* White hover */
+
+    /* Scroll background gradient colors */
+    --scroll-gradient-start1: #fcfcfc; /* Adjusted to match new bg-primary */
+    --scroll-gradient-end1: #f0f4f8;
+    --scroll-gradient-start2: #e0e6eb;
+    --scroll-gradient-end2: #fcfcfc; /* Adjusted to match new bg-primary */
+}
+
+/* Apply variables to elements */
+body {
+    background: linear-gradient(to right, var(--scroll-gradient-start1), var(--scroll-gradient-start2));
+    color: var(--text-primary);
+}
+
+header {
+    background-image: linear-gradient(to right, var(--header-bg-start), var(--header-bg-end));
+    color: var(--text-heading);
+}
+
+header nav ul li a {
+    color: var(--text-heading); /* Default link color in header */
+}
+
+header nav ul li a:hover {
+    color: var(--header-link-hover);
+}
+
+/* Hero section */
+#hero {
+    background-color: var(--section-bg);
+    color: var(--text-primary);
+    /* Added a subtle border for definition */
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Photo border */
+#hero img {
+    border-color: var(--photo-border);
+}
+
+#hero h2 {
+    color: var(--text-heading);
+}
+
+#hero p {
+    color: var(--text-secondary);
+}
+
+/* Project section */
+#projects {
+    background-color: var(--section-bg);
+    color: var(--text-primary);
+    border: 1px solid rgba(0,0,0,0.05); /* Added a subtle border */
+}
+
+#projects h2 {
+    color: var(--text-heading);
+}
+
+#projects > div > div { /* Targeting project cards directly */
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.03); /* Lighter border for cards */
+}
+
+#projects h3 {
+    color: var(--text-heading);
+}
+
+#projects p {
+    color: var(--text-secondary);
+}
+
+#projects a {
+    color: var(--link-main); /* Default for project links */
+}
+
+#projects a:hover {
+    color: var(--link-main-hover);
+}
+
+/* About section */
+#about {
+    background-color: var(--section-bg);
+    color: var(--text-primary);
+    border: 1px solid rgba(0,0,0,0.05); /* Added a subtle border */
+}
+
+#about h2 {
+    color: var(--text-heading);
+}
+
+#about p {
+    color: var(--text-secondary);
+}
+
+/* Contact section */
+#contact {
+    background-color: var(--section-bg);
+    color: var(--text-primary);
+    border: 1px solid rgba(0,0,0,0.05); /* Added a subtle border */
+}
+
+#contact h2 {
+    color: var(--text-heading);
+}
+
+#contact p {
+    color: var(--text-secondary);
+}
+
+/* Specific link colors for contact section - explicitly targeting icons */
+#contact a[href*="linkedin.com"] i { color: var(--link-linkedin); }
+#contact a[href*="wa.me"] i { color: var(--link-whatsapp); }
+#contact a[href*="v.eswar2005@gmail.com"] i { color: var(--link-personal-email); }
+#contact a[href*="smail.iitm.ac.in"] i { color: var(--link-student-email); }
+#contact a[href*="codeforces.com"] i { color: var(--link-codeforces); }
+#contact a[href*="github.com"] i { color: var(--link-github); }
+
+/* Apply text color to the span next to the icon */
+#contact a[href*="linkedin.com"] span { color: var(--text-primary); }
+#contact a[href*="wa.me"] span { color: var(--text-primary); }
+#contact a[href*="v.eswar2005@gmail.com"] span { color: var(--text-primary); }
+#contact a[href*="smail.iitm.ac.in"] span { color: var(--text-primary); }
+#contact a[href*="codeforces.com"] span { color: var(--text-primary); }
+#contact a[href*="github.com"] span { color: var(--text-primary); }
+
+
+/* Apply hover opacity to the entire link for consistency */
+#contact a:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+footer a {
+    color: var(--footer-text);
+}
+
+footer a:hover {
+    color: var(--footer-link-hover);
+}
